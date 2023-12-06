@@ -1,9 +1,8 @@
-import Image from 'next/image'
-import logo from '../logo.png'
-import githubLogo from './github.svg'
-import googleLogo from './icons8-google.svg'
+"use client"
 
-export default function Login() {
+import Image from 'next/image'
+
+export default function Home() {
   return (
     <main className="h-screen">
         {/*<section className="bg-zinc-400 rounded-5xl w-96 h-112 flex flex-col">
