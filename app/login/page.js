@@ -1,10 +1,13 @@
 "use client"
 
 import Image from 'next/image'
+import logo from '../logo.png'
+import githubLogo from './github.svg'
+import googleLogo from './icons8-google.svg'
 
 export default function Home() {
   return (
-    <main className="h-screen">
+    <main className="h-screen flex flex-col">
         {/*<section className="bg-zinc-400 rounded-5xl w-96 h-112 flex flex-col">
         <Image src={logo} width="280" height="104" alt="tasq logo" className="flex items-center" />
 
@@ -41,21 +44,22 @@ export default function Home() {
           </button>
         </section>
       </section>*/}
-
-      <section className="bg-zinc-400 rounded-5xl w-96 h-96 block translate-x-1/2 translate-y-1/2">
-        <div className="flex flex-col items-center pt-14"><Image src={logo} width="280" height="104" alt="tasq logo"/></div>
-        <p className="text-center mt-14 mb-1 text-2xl">Sign in with:</p>
-        <section className="flex gap-8 justify-center">
-          <button className="bg-gray-500 w-14 h-14 border-2 border-black rounded-md p-1">
-            <Image src={githubLogo} height="56" width="56" alt="Github sign in"/>
-          </button>
-          <button className="bg-gray-500 w-14 h-14 border-2 border-black rounded-md p-1">
-            <Image src={googleLogo} height="56" width="56" alt="Google sign in"/>
-          </button>
+      <div className="m-auto">
+        <section className="bg-zinc-400 rounded-5xl w-96 h-[450px] flex flex-col">
+          <div className="flex flex-col items-center pt-14"><Image src={logo} width="280" height="104" alt="tasq logo"/></div>
+          <p className="text-center mt-20 mb-1 text-2xl">Sign in with:</p>
+          <section className="flex gap-8 justify-center">
+            <button className="bg-gray-500 w-14 h-14 border-2 border-black rounded-md p-1">
+              <Image src={githubLogo} height="56" width="56" alt="Github sign in"/>
+            </button>
+            <button className="bg-gray-500 w-14 h-14 border-2 border-black rounded-md p-1">
+              <Image src={googleLogo} height="56" width="56" alt="Google sign in"/>
+            </button>
+          </section>
+          <div className="self-center mt-[5.5rem]">
+            <div className="text-zinc-600"><a target="_blank" href="https://icons8.com/icon/17949/google">Google</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
+          </div>
         </section>
-      </section>
-      <div className="flex flex-col ">
-        <a target="_blank" href="https://icons8.com/icon/17949/google">Google</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
       </div>
     </main>
   )
