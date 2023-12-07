@@ -57,7 +57,6 @@ const RegistrationPage = () => {
     }
   };
   
-
   return (
     <div>
       <h2>User Registration</h2>

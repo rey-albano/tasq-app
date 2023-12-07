@@ -4,8 +4,20 @@ import Image from 'next/image'
 import logo from '../logo.png'
 import githubLogo from './github.svg'
 import googleLogo from './icons8-google.svg'
+import { useUserAuth } from './_utils/auth-context'
 
 export default function Home() {
+  const { user, gitHubSignIn } = useUserAuth();
+    
+  async function handleSignIn () {
+      try {
+          await gitHubSignIn();
+      } catch (err) {
+          console.log(err);
+      }
+      
+  }
+
   return (
     <main className="h-screen flex flex-col">
         {/*<section className="bg-zinc-400 rounded-5xl w-96 h-112 flex flex-col">
@@ -44,12 +56,14 @@ export default function Home() {
           </button>
         </section>
       </section>*/}
+      {user ? (<p>Yes</p>) : (<p>No</p>)}
       <div className="m-auto">
-        <section className="bg-zinc-400 rounded-5xl w-96 h-[450px] flex flex-col">
-          <div className="flex flex-col items-center pt-14"><Image src={logo} width="280" height="104" alt="tasq logo"/></div>
+        <section className="bg-zinc-400 rounded-5xl w-96 h-[450px] flex flex-col drop-shadow-[7px_10px_8px_black] outline outline-zinc-500">
+          <a href="../" className="flex flex-col items-center pt-14"><Image src={logo} width="280" height="104" alt="tasq logo"/></a>
           <p className="text-center mt-20 mb-1 text-2xl">Sign in with:</p>
           <section className="flex gap-8 justify-center">
-            <button className="bg-gray-500 w-14 h-14 border-2 border-black rounded-md p-1">
+            <button className="bg-gray-500 w-14 h-14 border-2 border-black rounded-md p-1"
+              onClick={handleSignIn}>
               <Image src={githubLogo} height="56" width="56" alt="Github sign in"/>
             </button>
             <button className="bg-gray-500 w-14 h-14 border-2 border-black rounded-md p-1">

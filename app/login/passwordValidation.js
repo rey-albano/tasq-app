@@ -20,6 +20,6 @@ export const usePasswordValidation = ({ firstPassword = "", secondPassword = ""}
     return [validLength, hasNumber, upperCase, lowerCase, specialChar, match];
 }
 
-export const isValidPassword = (checks) => {
+export const isValidPassword = (check) => {
     return check.every(x => x);
 }

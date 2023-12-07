@@ -1,5 +1,6 @@
 import { Alatsi } from 'next/font/google'
 import './globals.css'
+import { AuthContextProvider } from './login/_utils/auth-context'
 
 const alatsi = Alatsi({ weight: "400", subsets: ['latin'] })
 
@@ -11,7 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={alatsi.className}>{children}</body>
+      <body className={alatsi.className}>
+        <AuthContextProvider>{children}</AuthContextProvider>
+      </body>
     </html>
   )
 }
