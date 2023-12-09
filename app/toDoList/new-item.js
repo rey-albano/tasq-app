@@ -1,4 +1,4 @@
-
+//Eli and Evan together
 import react, { useState } from "react";
 
 const NewItem = ({onAddItem}) => {
@@ -51,17 +51,17 @@ const NewItem = ({onAddItem}) => {
               onChange={(e) => setPriority(e.target.value)}
               className="border border-gray-300 p-2 w-full text-black"
             >
-              <option value="Low">Low Priority</option>
-              <option value="Medium">Medium Priority</option>
-              <option value="High">High Priority</option>
+              <option value="Low priority">Low Priority</option>
+              <option value="Medium priority">Medium Priority</option>
+              <option value="High priority">High Priority</option>
             </select>
           </div>
     
-          <button type="submit" className="w-1/2 bg-green-500 text-white px-4 py-2 rounded hover:bg-purple-700">
-            Add
-          </button>
-          <button onClick={() => handleDelete(name)} className="w-1/2 bg-red-500 text-white px-4 py-2 rounded hover:bg-purple-700">
+          <button type="submit" className="w-1/2 bg-red-500 text-white px-4 py-2 rounded hover:bg-purple-700">
             Remove
+          </button>
+          <button onClick={() => handleDelete(name)} className="w-1/2 bg-green-500 text-white px-4 py-2 rounded hover:bg-purple-700">
+            Add
           </button>
         </form>
       );   
