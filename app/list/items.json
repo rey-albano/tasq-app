@@ -1,4 +1,3 @@
-
 [
     {
       "name": "Walk Dogs",
@@ -14,14 +13,8 @@
       "priority": "High priority"
     },
     {
-      "name": "Forknife",
-      "priority": "High priority"
-    },
-
-    {
-      "name": "Forknife",
+      "name": "Develop programs",
       "priority": "High priority"
     }
-    
   ]
    

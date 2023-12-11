@@ -35,9 +35,6 @@ export default function Login() {
               <Image src={githubLogo} height="56" width="56" alt="Github sign in"/>
             </button>
           </section>
-          <div className="self-center mt-[5.5rem]">
-            <div className="text-zinc-600"><a target="_blank" href="https://icons8.com/icon/17949/google">Google</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
-          </div>
         </section>
       </div>
     </main>

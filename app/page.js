@@ -7,7 +7,7 @@ import { useUserAuth } from './login/_utils/auth-context';
 import { useState } from 'react';
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false); //  Set to true for testing sake
+  const [isOpen, setIsOpen] = useState(false);
   const { user, firebaseSignOut } = useUserAuth();
 
   async function handleSignOut () {
@@ -24,10 +24,7 @@ export default function Home() {
         <div>
           <div className="flex flex-row-reverse mt-4 mr-4">
             <button className="shadow-2xl bg-gray-500 px-8 py-3 border-4 border-slate-800 rounded-xl text-xl group-hover:bg-slate-700 relative inline-block"
-              onClick={() => {
-                setIsOpen(!isOpen)
-                console.log(isOpen);
-              }}>              
+              onClick={() => setIsOpen(!isOpen)}>
               {isOpen && (
                 <span className="absolute z-[1] bg-gray-700/[.80] top-[105%] left-1 p-2 w-[140px] text-left cursor-default">
                   <Link href="./list" className="hover:underline">List</Link><br/>
