@@ -18,10 +18,13 @@ export default function Login() {
       
   }
 
+  if (user) {
+    document.location.href = '../';
+  }
+
   return (
     <main className="h-screen flex flex-col">
-      <Link href="../" className="shadow-2xl bg-gray-600 px-8 py-3 border-4 border-slate-800 rounded-xl text-xl hover:bg-slate-700 w-40 text-center self-center m-4">Go Back</Link>
-      {user ? (document.location.href = '../') : (<p>No</p>)}
+      <Link href="../" className="shadow-2xl bg-gray-600 px-8 py-3 border-4 border-slate-800 rounded-xl text-xl hover:bg-slate-700 w-40 text-center m-4 absolute z-1 top-0">Go Back</Link>
       <div className="m-auto">
         <section className="bg-zinc-400 rounded-5xl w-96 h-[450px] flex flex-col drop-shadow-[7px_10px_8px_black] outline outline-zinc-500">
           <a href="../" className="flex flex-col items-center pt-14"><Image src={logo} width="280" height="104" alt="tasq logo"/></a>
