@@ -26,3 +26,34 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.app-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ensure the container takes the full viewport height */
+}
+
+.login-container,
+.list-container {
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+  text-decoration: none; /* Remove default link underline */
+  color: black; /* Black text color for both containers */
+}
+
+.login-container {
+  background-color: #f0f0f0; /* Light grey background color for login */
+}
+
+.list-container {
+  background-color: #f0f0f0; /* Light grey background color for List */
+}
+
+.list-container:hover,
+.login-container:hover {
+  background-color: #d0d0d0; /* Light grey background color on hover */
+}
+
+/* Add any additional styles as needed */
