@@ -55,7 +55,10 @@ export default function Home() {
             <Image src={googleLogo} height="56" width="56" alt="Google sign in"/>
           </button>
         </section>
-      </section>*/}
+      </section>
+      
+      The next bit in curly braces is just for user testing
+      */}
       {user ? (<p>Yes</p>) : (<p>No</p>)}
       <div className="m-auto">
         <section className="bg-zinc-400 rounded-5xl w-96 h-[450px] flex flex-col drop-shadow-[7px_10px_8px_black] outline outline-zinc-500">
