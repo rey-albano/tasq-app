@@ -1,6 +1,7 @@
 import { Alatsi } from 'next/font/google'
 import './globals.css'
 import { AuthContextProvider } from './login/_utils/auth-context'
+import { BrowserRouter } from 'react-router-dom'
 
 const alatsi = Alatsi({ weight: "400", subsets: ['latin'] })
 
